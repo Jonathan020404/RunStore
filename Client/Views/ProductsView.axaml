@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Client.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Client.Views.ProductsView"
+             x:DataType="vm:ProductsViewModel"
+             Background="{DynamicResource PrimaryBackgroundColor}"
+             Foreground="{DynamicResource PrimaryTextColor}">
+             
+
+  <Design.DataContext>
+    <vm:ProductsViewModel></vm:ProductsViewModel>
+  </Design.DataContext>
+
+  <StackPanel>
+    <TextBlock Classes="h1" Text="Våra produkter"/>
+
+    <Border BorderBrush="White" BorderThickness="0 0 0 1" Padding="0 0 0 5">
+      <Grid ColumnDefinitions="100, 100, 200, *, 30, 30">
+        <Label Grid.Column="0" Content="Artikelnr"/>
+        <Label Grid.Column="1" Content="Namn"/>
+        <Label Grid.Column="2" Content="Leverantör"/>
+        <Label Grid.Column="3" Content="Pris" HorizontalAlignment="Right" />
+        <Label Grid.Column="4" HorizontalAlignment="Right" />
+      </Grid>
+    </Border>
+
+      <ItemsControl ItemsSource="{Binding Products}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <Grid ColumnDefinitions="100, 100, 200, *, 30,30">
+                
+                <Label Content="{Binding ItemNumber}" />
+                <Label Grid.Column="1" Content="{Binding Name}" />
+                <Label Grid.Column="2" Content="{Binding SupplierName}" />
+                <Label Grid.Column="3" Content="{Binding Price}" HorizontalAlignment="Right"/> 
+                <Button Grid.Column="4" Command="{Binding Edit}" FontFamily="{DynamicResource IconFont}" Foreground="LightGreen" Content="&#xE3AE;" Padding="10 0 0 2" HorizontalAlignment="Right" />
+                <Button Grid.Column="5" Command="{Binding Delete}" FontFamily="{DynamicResource IconFont}" Foreground="Red" Content="&#xe4a6;" Padding="10 0 0 2" HorizontalAlignment="Right" />
+                
+            </Grid>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+   </StackPanel>
+  
+
+</UserControl>
+
