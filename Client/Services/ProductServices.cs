@@ -8,14 +8,12 @@ using Client.Repositories;
 
 namespace Client.Services;
 
-public class ProductServices
+public class ProductServices : IProductService
 {
-    static readonly string path = Directory.GetCurrentDirectory() + "/Data/products.json";
-
-    static readonly Storage<Product> storage = new();
-
-    public static List<Product> ListAllProducts()
+    public List<Product> List()
     {
+        var storage = new Storage<Product>();
+        var path = Directory.GetCurrentDirectory() + "/Data/products.json";
         var json = storage.Read(path);
 
         var sortedJson = json.OrderBy(x => x.ItemNumber).ToList();

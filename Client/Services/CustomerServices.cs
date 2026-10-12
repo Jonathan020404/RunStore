@@ -8,14 +8,12 @@ using Client.Repositories;
 
 namespace Client.Services;
 
-public class CustomerServices
+public class CustomerServices : ICustomerService
 {
-    static readonly string path = Directory.GetCurrentDirectory() + "/Data/customers.json";
-
-    static readonly Storage<Customer> storage = new();
-
-    public static List<Customer> ListAllCustomers()
+    public List<Customer> List()
     {
+        var storage = new Storage<Customer>();
+        var path = Directory.GetCurrentDirectory() + "/Data/customers.json";
         var json = storage.Read(path);
 
         return json;

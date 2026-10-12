@@ -100,3 +100,5 @@ C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Svg.Sce
 C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Svg.Skia.dll
 C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\runtimes\linux-bionic-arm64\native\libHarfBuzzSharp.so
 C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\runtimes\linux-bionic-x64\native\libHarfBuzzSharp.so
+C:\Users\Jonte\Documents\programmering\RunStore\Client\obj\Debug\net10.0\Client.sourcelink.json
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll

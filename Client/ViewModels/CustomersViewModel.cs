@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Client.Interfaces;
 using Client.Models;
 using Client.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -12,9 +13,14 @@ public partial class CustomersViewModel : ViewModelBase
     [ObservableProperty]
     public partial ObservableCollection<Customer> Customers { get; set; } = [];
 
-    public CustomersViewModel()
+    private ICustomerService _service;
+
+    public CustomersViewModel() { }
+
+    public CustomersViewModel(ICustomerService service)
     {
         PageTitle = "Våra kunder";
+        _service = service;
         LoadCustomers();
     }
 
@@ -22,7 +28,7 @@ public partial class CustomersViewModel : ViewModelBase
     {
         try
         {
-            Customers = new ObservableCollection<Customer>(CustomerServices.ListAllCustomers());
+            Customers = new ObservableCollection<Customer>(_service.List());
         }
         catch (Exception ex)
         {
