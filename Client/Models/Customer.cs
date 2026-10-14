@@ -2,7 +2,7 @@ using System;
 
 namespace Client.Models;
 
-public record class Customer
+public record Customer
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();
     public required string FirstName { get; set; }
@@ -12,14 +12,4 @@ public record class Customer
     public string? AddressLine { get; set; }
     public string? PostalCode { get; set; }
     public string? City { get; set; }
-
-    public void Edit()
-    {
-        Console.WriteLine("Ändra uppgifter");
-    }
-
-    public void Delete()
-    {
-        Console.WriteLine("Ta bort produkt");
-    }
 }

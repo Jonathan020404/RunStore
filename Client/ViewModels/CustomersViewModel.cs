@@ -5,15 +5,16 @@ using Client.Interfaces;
 using Client.Models;
 using Client.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Client.ViewModels;
 
-public partial class CustomersViewModel : ViewModelBase
+public partial class CustomersViewModel : PageViewModel
 {
     [ObservableProperty]
     public partial ObservableCollection<Customer> Customers { get; set; } = [];
 
-    private ICustomerService _service;
+    private readonly ICustomerService _service;
 
     public CustomersViewModel() { }
 
@@ -21,7 +22,20 @@ public partial class CustomersViewModel : ViewModelBase
     {
         PageTitle = "Våra kunder";
         _service = service;
+        PageName = Helpers.ApplicationNameEnum.Customers;
         LoadCustomers();
+    }
+
+    [RelayCommand]
+    public void Edit(string id)
+    {
+        Console.WriteLine("Ändra uppgifter " + id);
+    }
+
+    [RelayCommand]
+    public void Delete(string id)
+    {
+        Console.WriteLine("Ta bort produkt " + id);
     }
 
     private void LoadCustomers()

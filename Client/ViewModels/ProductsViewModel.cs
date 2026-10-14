@@ -9,7 +9,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Client.ViewModels;
 
-public partial class ProductsViewModel : ViewModelBase
+public partial class ProductsViewModel : PageViewModel
 {
     private IProductService _service;
 
@@ -20,20 +20,21 @@ public partial class ProductsViewModel : ViewModelBase
     {
         PageTitle = "Våra produkter";
         _service = service;
+        PageName = Helpers.ApplicationNameEnum.Products;
         LoadProducts();
     }
 
-    /*[RelayCommand]
-    public void Edit()
+    [RelayCommand]
+    public void Edit(string id)
     {
-        Console.WriteLine("Ändra uppgifter");
+        Console.WriteLine("Ändra uppgifter " + id);
     }
 
     [RelayCommand]
-    public void Delete()
+    public void Delete(string id)
     {
-        Console.WriteLine("Ta bort produkt");
-    }*/
+        Console.WriteLine("Ta bort produkt " + id);
+    }
 
     private void LoadProducts()
     {

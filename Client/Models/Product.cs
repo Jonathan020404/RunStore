@@ -17,14 +17,4 @@ public class Product
     public required string SupplierName { get; set; }
 
     public int Price { get; set; }
-
-    public void Edit()
-    {
-        Console.WriteLine("Ändra uppgifter");
-    }
-
-    public void Delete()
-    {
-        Console.WriteLine("Ta bort produkt");
-    }
 }
