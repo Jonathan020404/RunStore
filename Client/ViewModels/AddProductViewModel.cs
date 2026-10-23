@@ -50,5 +50,15 @@ public partial class AddProductViewModel : ViewModelBase
         };
 
         await _productService.Add(product);
+
+        ClearData();
+    }
+
+    private void ClearData()
+    {
+        ItemNumber = string.Empty;
+        ProductName = string.Empty;
+        Supplier = string.Empty;
+        Price = 0;
     }
 }

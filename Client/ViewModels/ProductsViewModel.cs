@@ -28,9 +28,21 @@ public partial class ProductsViewModel : PageViewModel
     }
 
     [RelayCommand]
-    public void Delete(string id)
+    public async Task Delete(string id)
     {
-        Console.WriteLine("Ta bort produkt " + id);
+        try
+        {
+            ProductRestDb product = await _productService.Find(id);
+            if (product is not null)
+            {
+                await _productService.Delete(product._id);
+                await LoadProducts();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
     private async void Init()
