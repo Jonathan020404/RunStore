@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Threading.Tasks;
 using Client.Interfaces;
 using Client.Models;
 using Client.Services;
@@ -14,16 +16,14 @@ public partial class CustomersViewModel : PageViewModel
     [ObservableProperty]
     public partial ObservableCollection<Customer> Customers { get; set; } = [];
 
-    private readonly ICustomerService _service;
-
-    public CustomersViewModel() { }
+    private readonly ICustomerService _customerService;
 
     public CustomersViewModel(ICustomerService service)
     {
         PageTitle = "Våra kunder";
-        _service = service;
+        _customerService = service;
         PageName = Helpers.ApplicationNameEnum.Customers;
-        LoadCustomers();
+        Init();
     }
 
     [RelayCommand]
@@ -38,11 +38,16 @@ public partial class CustomersViewModel : PageViewModel
         Console.WriteLine("Ta bort produkt " + id);
     }
 
-    private void LoadCustomers()
+    private async void Init()
+    {
+        await LoadCustomers();
+    }
+
+    private async Task LoadCustomers()
     {
         try
         {
-            Customers = new ObservableCollection<Customer>(_service.List());
+            Customers = new ObservableCollection<Customer>(await _customerService.List());
         }
         catch (Exception ex)
         {

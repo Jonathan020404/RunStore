@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Client.Models;
 
 namespace Client.Interfaces;
 
 public interface IProductService
 {
-    public List<Product> List();
+    Task<List<Product>> List();
+    Task Add(Product product);
+    Task<Product> Find(string itemNumber);
 }

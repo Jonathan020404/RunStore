@@ -11,7 +11,7 @@ build_property.AvaloniaUseCompiledBindingsByDefault = true
 build_property.AvaloniaMainPackageVersion = 12.1.3
 build_property.AvaloniaMainPackageVersion = 12.1.3
 build_property.AvaloniaPreviewerNetCoreToolPath = C:\Users\Jonte\.nuget\packages\avalonia\12.1.3\buildTransitive\\..\tools\net8.0\designer\Avalonia.Designer.HostApp.dll
-build_property.AvaloniaResourcePaths = c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Fonts\Montserrat-Regular.ttf,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Fonts\Phosphor.ttf,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\jogging-forest.png,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\runstore.png,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\runstore.svg,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\AppStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\MenuButtonStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\App.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\AppStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\CustomersView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\HomeView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\MainWindow.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\OrdersView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\ProductsView.axaml
+build_property.AvaloniaResourcePaths = c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Fonts\Montserrat-Regular.ttf,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Fonts\Phosphor.ttf,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\jogging-forest.png,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\runstore.png,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Images\runstore.svg,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\AppStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\MenuButtonStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\App.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Assets\Styles\AppStyles.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\AddProductView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\CustomersView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\EditProductView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\HomeView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\MainWindow.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\OrdersView.axaml,c:\Users\Jonte\Documents\programmering\RunStore\Client\Views\ProductsView.axaml
 build_property.TargetFramework = net10.0
 build_property.TargetFramework = net10.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
@@ -55,7 +55,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [c:/Users/Jonte/Documents/programmering/RunStore/Client/Assets/Styles/AppStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[c:/Users/Jonte/Documents/programmering/RunStore/Client/Views/AddProductView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [c:/Users/Jonte/Documents/programmering/RunStore/Client/Views/CustomersView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[c:/Users/Jonte/Documents/programmering/RunStore/Client/Views/EditProductView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [c:/Users/Jonte/Documents/programmering/RunStore/Client/Views/HomeView.axaml]

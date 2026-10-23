@@ -36,4 +36,15 @@ public partial class MainWindowViewModel : ViewModelBase
     [RelayCommand]
     private void GoToCustomers() =>
         CurrentView = _factory.LoadPageViewModel(Helpers.ApplicationNameEnum.Customers);
+
+    [RelayCommand]
+    private void GoToAddProduct() =>
+        CurrentView = _factory.LoadPageViewModel(Helpers.ApplicationNameEnum.AddProduct);
+
+    [RelayCommand]
+    private void GoToEditProduct(string itemNumber) =>
+        CurrentView = _factory.LoadPageViewModel(
+            Helpers.ApplicationNameEnum.EditProduct,
+            itemNumber
+        );
 }

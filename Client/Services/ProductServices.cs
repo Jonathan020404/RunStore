@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Client.Interfaces;
 using Client.Models;
 using Client.Repositories;
@@ -10,14 +11,24 @@ namespace Client.Services;
 
 public class ProductServices : IProductService
 {
-    public List<Product> List()
+    public async Task Add(Product product)
     {
-        var storage = new Storage<Product>();
-        var path = Directory.GetCurrentDirectory() + "/Data/products.json";
-        var json = storage.Read(path);
+        var httpService = new HttpService<Product>();
+        await httpService.Post("products", product);
+    }
 
-        var sortedJson = json.OrderBy(x => x.ItemNumber).ToList();
+    public async Task<Product> Find(string itemNumber)
+    {
+        var httpService = new HttpService<Product>();
+        var searchCriteria = "{\"itemNumber\":" + "\"" + itemNumber + "\"}";
+        return await httpService.Get("products", searchCriteria);
+    }
 
-        return sortedJson;
+    public async Task<List<Product>> List()
+    {
+        var httpService = new HttpService<Product>();
+        var products = await httpService.Get("products");
+
+        return products;
     }
 }

@@ -6,5 +6,7 @@ namespace Client.Interfaces;
 
 public interface IPageViewFactory
 {
-    PageViewModel LoadPageViewModel(ApplicationNameEnum pageName);
+    // PageViewModel LoadPageViewModel(ApplicationNameEnum pageName);
+
+    ViewModelBase LoadPageViewModel(ApplicationNameEnum page);
 }

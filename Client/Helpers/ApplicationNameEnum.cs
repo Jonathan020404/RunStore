@@ -6,4 +6,6 @@ public enum ApplicationNameEnum
     Customers,
     Orders,
     Products,
+    AddProduct,
+    EditProduct,
 }

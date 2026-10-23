@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Client.Models;
 
 namespace Client.Interfaces;
 
 public interface ICustomerService
 {
-    public List<Customer> List();
+    Task<List<Customer>> List();
 }
