@@ -6,8 +6,8 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Client.Views.CustomersView"
              x:DataType="vm:CustomersViewModel"
-             Background="{DynamicResource PrimaryBackgroundColor}"
-             Foreground="{DynamicResource PrimaryTextColor}">
+             Background="{DynamicResource BackgroundColor}"
+             Foreground="{DynamicResource ForegroundColor}">
 
   <Design.DataContext>
     <vm:CustomersViewModel></vm:CustomersViewModel>

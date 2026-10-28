@@ -102,3 +102,11 @@ C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\runtime
 C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\runtimes\linux-bionic-x64\native\libHarfBuzzSharp.so
 C:\Users\Jonte\Documents\programmering\RunStore\Client\obj\Debug\net10.0\Client.sourcelink.json
 C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Jonte\Documents\programmering\RunStore\Client\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll

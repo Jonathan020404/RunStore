@@ -41,11 +41,28 @@
               <Label Grid.Column="2" Content="{Binding SupplierName}" />
               <Label Grid.Column="3" Content="{Binding Price}" HorizontalAlignment="Right" />
               <Button Grid.Column="4"  Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).GoToEditProductCommand}" CommandParameter="{Binding ItemNumber}" FontFamily="{DynamicResource IconFont}" Content="&#xebc6;" Foreground="Green" Padding="10 5 0 10"></Button>
-              <Button Grid.Column="5" Command="{Binding $parent[UserControl].DataContext.DeleteCommand}" CommandParameter="{Binding ItemNumber}" FontFamily="{DynamicResource IconFont}" Content="&#xe4a6;" Foreground="Red" Padding="10 5 0 10"></Button>
+              <Button Classes="danger" Grid.Column="5" Command="{Binding $parent[UserControl].DataContext.DeleteCommand}" CommandParameter="{Binding ItemNumber}" FontFamily="{DynamicResource IconFont}" Content="&#xe4a6;" Padding="10 5 0 10"></Button>
             </Grid>
           </DataTemplate>
         </ItemsControl.ItemTemplate>
       </ItemsControl>
     </ScrollViewer>
+
+    <Popup IsOpen="{Binding ShowDialog}" Placement="Center">
+      <Border Padding="30" Background="Orange" BorderBrush="White" BorderThickness="2">
+        <StackPanel>
+          <StackPanel Spacing="20">
+            <TextBlock Padding="20" Text="Är du säker på att du vill ta bort produkten?" Foreground="White" FontSize="30" />
+          </StackPanel>
+
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+          <Button Command="{Binding ConfirmCommand}">Ja</Button>
+          <Button Command="{Binding CancelCommand}">Nej</Button>
+          </StackPanel>
+        </StackPanel>
+      </Border>
+    </Popup>
+
+
   </StackPanel>
 </UserControl>

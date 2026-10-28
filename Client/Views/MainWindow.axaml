@@ -12,7 +12,7 @@
         <vm:MainWindowViewModel></vm:MainWindowViewModel>
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource PrimaryBackgroundColor}">
+    <Grid ColumnDefinitions="Auto,*" Background="{DynamicResource BackgroundColor}">
         <Border Padding="10" Background="{DynamicResource PrimaryBackgroundGradient}">
             <Grid RowDefinitions="*,Auto">
 
@@ -21,7 +21,7 @@
                         <!-- <Image Width="48" Height="48" Source="avares://Client/Assets/Images/runstore.png" /> -->
                         <!-- <Image Width="60" Source="{SvgImage /Assets/Images/runstore.svg}"></Image> -->
                         <Svg Width="60" Path="/Assets/Images/runstore.svg"></Svg>
-                        <TextBlock VerticalAlignment="Center" Text="RunStore" FontSize="20" Foreground="{DynamicResource PrimaryTextColor}" />
+                        <TextBlock VerticalAlignment="Center" Text="RunStore" FontSize="20" Foreground="{DynamicResource ForegroundColor}" />
                     </StackPanel>
                     <Button Command="{Binding GoToHomeCommand}" >
                         <StackPanel Orientation="Horizontal">

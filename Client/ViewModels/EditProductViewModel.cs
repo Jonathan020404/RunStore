@@ -60,16 +60,15 @@ public partial class EditProductViewModel : ViewModelBase
 
         _objectId = product._id;
 
-        _imageUrl =
-            product.ImageUrl
-            ?? "https://res.cloudinary.com/softtech.com/softtech-dev/image/upload/v1773483409/no-image_yml";
+        _imageUrl = string.IsNullOrEmpty(product.ImageUrl)
+            ? "https://res.cloudinary.com/softtech-dev/image/upload/v1773483409/no-image_ymlpwk.png"
+            : product.ImageUrl;
 
         ItemNumber = product.ItemNumber;
         ProductName = product.Name;
         Supplier = product.SupplierName;
         Price = product.Price;
-
-        Image = product.ImageUrl is null ? null : await ImageHelper.ImageFromUrl(product.ImageUrl);
+        Image = await ImageHelper.ImageFromUrl(_imageUrl);
     }
 
     [RelayCommand]
